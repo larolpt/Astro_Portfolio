@@ -1,0 +1,24 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE=[
+    {
+        place:"Practicas en ADRIMA",
+        time:"MARZO 2023 - JUNIO 2023", 
+        desc:"Durante este periodo, me dediqué a la creación de varios componentes para un catálogo en Storybook. También desarrollé algoritmos y realicé pruebas con Elixir y Phoenix. Además, mejoré mis habilidades en Arch Linux."
+    },
+]
+---
+	<div class="mx-auto">
+		<div class="grid gap-4 mx-4">
+			<div class="relative col-span-12 px-4 space-y-6 sm:col-span-9">
+				<div class="col-span-12 space-y-16 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:dark:bg-gray-700">
+                    {
+                    EXPERIENCE.map(experience => (
+                        <ExperienceItem {...experience} />
+                    ))
+                    }
+				</div>
+			</div>
+		</div>
+	</div>

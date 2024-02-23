@@ -1,0 +1,82 @@
+---
+
+const navItems = [
+  {
+    title: "Sobre mí",
+    label: "sobre-mi",
+    url: "/#about",
+  },
+  {
+    title: "Experiencia",
+    label: "experiencia",
+    url: "/#experience",
+  },
+  {
+    title: "Proyectos",
+    label: "proyectos",
+    url: "/#projects",
+  },
+  {
+    title: "Estudios",
+    label: "estudios",
+    url: "/#studies",
+  },
+  {
+    title: "Contacto",
+    label: "contacto",
+    url: "#contact",
+  },
+]
+---
+
+<header
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+>
+  <nav
+    class="flex px-2 gap-x-2 text-sm font-medium border-2 border-gray-700 rounded-full text-white-700 bg-slate-900 justify-center items-center"
+  >
+    {
+      navItems.map((link) => (
+        <a
+          class="relative rounded-full block py-3 px-4 transition-all duration-400 ease-in-out hover:bg-violet-400 hover:rounded-full hover:py-2 hover:duration-500"
+          aria-label={link.label}
+          href={link.url}
+        >
+          {link.title}
+        </a>
+      ))
+    }
+  </nav>
+</header>
+
+<script>
+  document.querySelector("header nav a[href*=about]").classList.add("active");
+
+  window.onscroll=()=> {
+  let sections = document.querySelectorAll('section');
+  let navLinks = document.querySelectorAll('header nav a');
+    
+  sections.forEach((sec) => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop-150;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute("id");
+
+    if (top > offset && top < offset + height) {
+      navLinks.forEach(links => {
+
+        links.classList.remove('active');
+        document.querySelector("header nav a[href*=" + id + "]").classList.add("active");
+      })
+    }
+  })
+}
+</script>
+
+<style>
+    .active{
+      @apply bg-violet-400 rounded-full py-2 text-gray-800 font-bold;
+    }
+</style>
+
+
