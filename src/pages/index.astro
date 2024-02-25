@@ -1,43 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Linkedln from '../icons/Linkedln.astro'
-import Github from '../icons/Github.astro';
-import Gmail from '../icons/Gmail.astro';
 import BriefCase from '../icons/BriefCase.astro';
 import Book from '../icons/Book.astro';
 import CodeBracket from '../icons/CodeBracket.astro';
 import ChatBubble from '../icons/ChatBubble.astro';
-import SocialPill from '../components/SocialPill.astro';
 import Experience from '../components/Experience.astro';
 import Container from '../components/Container.astro';
 import Projects from '../components/Projects.astro';
 import Studies from '../components/Studies.astro';
 import Emails from '../components/Emails.astro';
+import Footer from '../components/Footer.astro';
+import About from '../components/About.astro';
 ---
 
-<Layout title="Portfolio de Laro, Desarrollador y programador">
+<Layout title="Portfolio de Laro, desarrollador y programador">
 	<main class="px-4">
 		<Container id="about">
-			<h1 class="text-white text-3xl md:text-4xl font-bolt flex flex-row">Hola me llamo Laro</h1>
-			<h2 class="py-4 text-lx text-wrap">
-				Soy un chico que ha empezado a introducirse en el mundo del desarrollo hace relativamente poco. 
-				He cursado el Grado Superior de desarrollo de aplicaciones multiplataforma, 
-				durante este, he descubierto mi gran capacidad de adaptación gracias a que he podido trabajar con diferentes tecnologías 
-				tanto en el curso como en las prácticas del mismo.
-				Mis objetivos son seguir formándome en este campo y tener la oportunidad de introducirme en el mercado laboral de 
-				la mano de una empresa que me haga crecer como desarrollador.
-			</h2>
-			<nav class="flex flex-row gap-x-2 mt-3">
-				<SocialPill href="https://github.com/larolpt">
-					<Github class="size-6"/>Github
-				</SocialPill>
-				<SocialPill href="https://www.linkedin.com/in/laro-pozuelo-de-la-torriente-151757281/">
-					<Linkedln class="size-6"/>Linkedln
-				</SocialPill>
-				<SocialPill href="mailto:larolpt@gmail.com">
-					<Gmail class="size-6"/>larolpt@gmail.com
-				</SocialPill>
-			</nav>
+			<About/>
 		</Container>
 		<Container id="experience">
 			<div class="flex flex-row pb-6">
@@ -60,13 +39,17 @@ import Emails from '../components/Emails.astro';
 			</div>
 			<Studies/>
 		</Container>
-		<Container id="contact">
-			<div class="flex flex-row pb-6">
-				<ChatBubble class="size-8"/>
-				<h2 class="text-3xl pl-2 font-semibold">CONTACTO</h2>
-			</div>
-			<Emails/>
-		</Container>
+		<div class="pb-32">
+			<Container id="contact">
+				<div class="flex flex-row pb-6">
+					<ChatBubble class="size-8"/>
+					<h2 class="text-3xl pl-2 font-semibold">CONTACTO</h2>
+				</div>
+				<Emails/>
+			</Container>
+		</div>
+		<Footer/>
+
 	</main>
 </Layout>
 

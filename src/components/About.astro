@@ -1,0 +1,28 @@
+---
+import Linkedln from '../icons/Linkedln.astro'
+import Github from '../icons/Github.astro';
+import Gmail from '../icons/Gmail.astro';
+import SocialPill from '../components/SocialPill.astro';
+---
+    <h1 class="text-white text-3xl md:text-4xl font-bolt flex flex-row">Hola me llamo Laro</h1>
+    <p class="py-4 text-lx text-wrap">
+        ¡Hola! Soy Laro, un entusiasta de la programación. Actualmente estoy mejorando mis habilidades y desarrollandome profesionalmente.
+    </p>
+    <p class="py-4 text-lx text-wrap">
+        Aunque todavía estoy en las primeras etapas de mi carrera, estoy dedicado al crecimiento continuo y la adquisición de nuevas habilidades. Me apasiona explorar las diversas áreas del desarrollo de software.
+        Disfruto especialmente con la parte del desarrollo, donde estoy dedicando tiempo y esfuerzo para adquirir un profundo conocimiento y experiencia. Estoy emocionado por introducirme en el mundo laboral de este campo y conseguir nuevas oportunidades.				
+    </p>
+    <p class="py-4 text-lx text-wrap">
+        Además de mi dedicación a mi formación, me gusta hacer deporte y disfruto compartiendo mis pasiones con mis amigos. Ya sea jugando en equipo, yendo al gimnasio o explorando nuevas actividades al aire libre, siempre encuentro alegría en mantenerme activo y saludable.
+    </p>
+    <nav class="flex flex-row gap-x-2 mt-3">
+        <SocialPill href="https://github.com/larolpt">
+            <Github class="size-6"/>Github
+        </SocialPill>					
+        <SocialPill href="https://www.linkedin.com/in/laro-pozuelo-de-la-torriente-151757281/">
+            <Linkedln class="size-6"/>Linkedln
+        </SocialPill>
+        <SocialPill href="mailto:larolpt@gmail.com">
+            <Gmail class="size-6"/>larolpt@gmail.com
+        </SocialPill>
+    </nav>

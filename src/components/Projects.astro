@@ -34,21 +34,14 @@ const PROJECTS = [
     },
     {
         title: "Portfolio personal",
-        description: "Este proyecto esta hecho con el objetivo de aprender Astro y enseñar mis proyectos personales que voy haciendo.",
+        description: "Este proyecto esta hecho con el objetivo de aprender Astro y enseñar mis proyectos personales que voy desarrollando.",
         github: "",
         image: "https://flowbite.com/docs/images/blog/image-1.jpg",
         tags: [TAGS.ASTRO,TAGS.TAILWIND,]
     },
-    {
-        title: "Sistema para Hospital",
-        description: "Este es un proyecto de la universidad con el objetivo de hacer un sistema de un hospital ademas de mejorar mis habilidades con la programación orientada a objetos.",
-        github: "",
-        image: "https://flowbite.com/docs/images/blog/image-1.jpg",
-        tags: [TAGS.JAVA,TAGS.TAILWIND]
-    },
 ]
 ---
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
     {
         PROJECTS.map(({title,description,github,image,tags}) => (
             <div class="w-full max-w-64 rounded overflow-hidden shadow-lg relative flex flex-col">
@@ -64,7 +57,7 @@ const PROJECTS = [
                         {description}
                     </p>
                 </div>
-                <footer class="w-full bg-slate-900 py-2 px-2 gap-x-2 rounded inline-flex items-center">
+                <footer class="w-full bg-slate-900 py-2 px-2 gap-x-2 rounded-b inline-flex items-center">
                     {
                         tags.map((tag) => (
                             <span class="">
